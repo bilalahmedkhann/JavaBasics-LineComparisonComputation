@@ -1,5 +1,4 @@
 import java.util.Scanner;
-
 class LineComparisonComputation {
     public static void main(String[] arg) {
         // Declaration Part
@@ -13,10 +12,8 @@ class LineComparisonComputation {
         int b2;
         double lengthOfLine1;
         double lengthOfLine2;
-
         // Get the input x1,y1,x2,y2,a1,a2,b1,b2 from the user
         Scanner sc = new Scanner(System.in);
-
         System.out.println("Enter x1 point :");
         x1 = sc.nextInt();
         System.out.println("Enter y1 point :");
@@ -39,9 +36,11 @@ class LineComparisonComputation {
         lengthOfLine1 = Math.sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1));
         System.out.println("Length between " + "(" + x1 + "," + y1 + ")," + "(" + x2 + "," + y2 + ")===>" + lengthOfLine1);
 
-        if (lengthOfLine1 == lengthOfLine2) {   // Check the Lines are equal or not
-            System.out.println("Both Lines are Equals");
+        if (lengthOfLine1 > lengthOfLine2) {
+            System.out.println("Line1 is greater than Line2");
+        } else if (lengthOfLine1 < lengthOfLine2) {
+            System.out.println("Line2 is greater than Line1 ");
         } else
-            System.out.println("Both Lines are Not Equals");
+            System.out.println("Both Lines are Equals");
     }
 }
